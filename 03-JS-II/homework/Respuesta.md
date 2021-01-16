@@ -2,6 +2,8 @@
 
 __Autor__: _Jorge Antonio Fernández_
 
+__email__: antoniojorgefernandez088@gmail.com
+
 ---
 
 **`for`**: el `for` es un bucle o sea es una rueda gira una determinada cantidad de veces o hasta que se cumpla una cierta condición.

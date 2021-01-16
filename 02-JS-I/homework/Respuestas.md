@@ -2,6 +2,8 @@
 
 ***Autor: Jorge Antonio Fernández***
 
+___email___: antoniojorgefernandez088@gmail.com
+
 ----
 
 __Variables__: una variable es como un cofre en cual puedes poner una cosa. A este cofre le das un nombre para que cuando quiera usar la cosa que esta dentro del mismo sea más fácil de encontrar.
