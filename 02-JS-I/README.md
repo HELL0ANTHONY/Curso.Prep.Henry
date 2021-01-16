@@ -27,7 +27,7 @@ En esta lección cubriremos:
 
 ## Introducción a Javascript
 
-JavaScript es un lenguaje de programación que fue creado originalmente para ser usado en el front-end de una pǻgina web. La idea original era poder dar dinamismo a las páginas webs, que en un principio eran estáticas. La introducción del "motor V8" de Google ha mejorado la velocidad y el funcionamiento de JS. Haciendo que JS (javascript) sea la lengua franca de la web, llegando inclusive al Back-End a través de NodeJs.
+JavaScript es un lenguaje de programación que fue creado originalmente para ser usado en el front-end de una página web. La idea original era poder dar dinamismo a las páginas webs, que en un principio eran estáticas. La introducción del "motor V8" de Google ha mejorado la velocidad y el funcionamiento de JS. Haciendo que JS (javascript) sea la lengua franca de la web, llegando inclusive al Back-End a través de NodeJs.
 
 Vamos a aprender los conceptos más básicos de JS:
 
@@ -37,7 +37,7 @@ Una variable es una forma de almacenar el valor de algo para usar más tarde. (U
 
 Para crear una variable en JavaScript utilizamos la palabra clave `var`, seguida de un espacio y el nombre de la variable (con este nombre podremos hacer referencia a ella luego). Además de declarar una variable, podemos asignarle un valor usando el signo `=`.
 
-> Nota: Las palabras claves o keywords son palabras especiales que utiliza el lenguaje para indicar algo. No podremos usas las palabras claves del lenguaje cómo nombres de variables.
+> Nota: Las palabras claves o keywords son palabras especiales que utiliza el lenguaje para indicar algo. No podremos usar las palabras claves del lenguaje cómo nombres de variables.
 
 Existen tres formas de declarar una variable:
 
@@ -126,9 +126,9 @@ En fin, lo importante a tener en cuenta es que los operadores _son_ funciones.
 
 ## Precedencia de Operadores y Asociatividad
 
-Esto parece aburrido, pero nos va a ayudar a saber cómo piensa el intérprete y bajo que reglas actua.
+Esto parece aburrido, pero nos va a ayudar a saber cómo piensa el intérprete y bajo que reglas actúa.
 
-La _precedencia de operadores_ es básicamente el orden en que se van a llamar las funciones de los operadores. Estás funciones son llamadas en _orden de precedencia_ (las que tienen __mayor__ precedencia se ejecutan primero).  O sea que si tenemos más de un operador, el intérprete va a llamar al operador de mayor precendencia primero y después va a seguir con los demás.
+La _precedencia de operadores_ es básicamente el orden en que se van a llamar las funciones de los operadores. Estás funciones son llamadas en _orden de precedencia_ (las que tienen __mayor__ precedencia se ejecutan primero).  O sea que si tenemos más de un operador, el intérprete va a llamar al operador de mayor precedencia primero y después va a seguir con los demás.
 
 La _Asociatividad de operadores_ es el orden en el que se ejecutan los operadores cuando tienen la misma precedencia, es decir, de izquierda a derecha o de derecha a izquierda.
 
@@ -139,7 +139,7 @@ Por ejemplo: `console.log( 3 + 4 * 5)` Para resolver esa expresión y saber qué
 > Cuando invocamos una función en Javascript, los argumentos son evaluados primeros (se conoce como [__non-lazy__ evaluation]()), está definido en la [especificación](http://es5.github.io/#x11.2.3).
 > No confundir el orden de ejecución con asociatividad y precedencia, [ver esta pregunta de StackOverflow](http://stackoverflow.com/questions/13849906/operator-precedence-and-associativity-with-math-floormath-random).
 
-Ahora si tuvieramos la misma precedencia entraría en juego la asociatividad, veamos un ejemplo:
+Ahora si tuviéramos la misma precedencia entraría en juego la asociatividad, veamos un ejemplo:
 
 ```javascript
 var a = 1, b = 2, c = 3;
@@ -149,7 +149,7 @@ a = b = c;
 console.log(a, b, c);
 ```
 
-Qué veriamos en el console.log? Para eso tenemos que revisar la tabla por la asociatividad del operador de asignación `=`. Este tiene una precedencia de 3 y una asociatividad de `right-to-left`, es decir que las operaciones se realizan primero de derecha a izquierda. En este caso, primero se realiza `b = c` y luego `a = b` (en realidad al resultado de `b = c`, que retorna el valor que se está asignando). Por lo tanto al final de todo, todas las variables van a tener el valor `3`. Si la asociatividad hubiese al revés, todos las variables tendrían el valor `1`.
+Qué veríamos en el console.log? Para eso tenemos que revisar la tabla por la asociatividad del operador de asignación `=`. Este tiene una precedencia de 3 y una asociatividad de `right-to-left`, es decir que las operaciones se realizan primero de derecha a izquierda. En este caso, primero se realiza `b = c` y luego `a = b` (en realidad al resultado de `b = c`, que retorna el valor que se está asignando). Por lo tanto al final de todo, todas las variables van a tener el valor `3`. Si la asociatividad hubiese al revés, todos las variables tendrían el valor `1`.
 
 ## Math
 
@@ -180,7 +180,7 @@ Javascript tiene una serie de objetos integrados para que los usemos. Ya hemos v
 
 ### Math.pow
 
-Podemos usar el método `pow` en` Math` para devolver un número elevado a un exponente. Tomará dos números.
+Podemos usar el método `pow` en ` Math` para devolver un número elevado a un exponente. Tomará dos números.
 
 ```javascript
 Math.pow(2,2) = 4;
@@ -212,7 +212,7 @@ Veremos muchos otros métodos integrados en otros tipos de datos a lo largo de e
 
 ## Introducción a las Funciones
 
-Las funciones son una parte muy importante de todo lenguaje de programacion y sobre todo en JavaScript. Són tipos particulares de Objetos, llamados `callable objects` u objetos invocables, por lo que tienen las mismas propiedades que cualquier objeto.
+Las funciones son una parte muy importante de todo lenguaje de programación y sobre todo en JavaScript. Son tipos particulares de Objetos, llamados `callable objects` u objetos invocables, por lo que tienen las mismas propiedades que cualquier objeto.
 
 Ahora que tenemos un conjunto de variables, necesitamos funciones para calcularlas, cambiarlas, hacer algo con ellas. Hay tres formas en que podemos construir una función.
 
@@ -321,7 +321,7 @@ function puedeManejar(edad) {
 puedeManejar(22); // true
 ```
 
-Aquí estamos tomando un número (`edad`) y verificando si la declaración es` true` (`22>18`), lo es, por lo que devolveremos` true`, y la función se detendrá. Si no es así, omitirá ese código y la función devolverá `false`.
+Aquí estamos tomando un número (`edad`) y verificando si la declaración es ` true` (`22>18`), lo es, por lo que devolveremos ` true`, y la función se detendrá. Si no es así, omitirá ese código y la función devolverá `false`.
 
 El símbolo "mayor que" (`>`) que ve en el último ejemplo se llama _Operador de comparación_. Los operadores de comparación evalúan dos elementos y devuelven `verdadero` o` falso`. Estos operadores son: `<`, `<=`, `>`, `> =`, `===`, `! ==`. Aprenderemos más sobre estos operadores en la próxima lección.
 
@@ -336,4 +336,4 @@ _Node.js_ es un entorno de tiempo de ejecución desarrollado originalmente para 
 
 * [Codecademy: Learn Javascript](https://www.codecademy.com/learn/learn-javascript)
 * [Udacity: Intro to Javascript](https://www.udacity.com/course/intro-to-javascript--ud803)
-* [MDN: Official Javascript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  * [MDN: Official Javascript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
