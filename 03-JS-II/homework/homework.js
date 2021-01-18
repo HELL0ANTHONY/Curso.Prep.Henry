@@ -1,22 +1,21 @@
 // Autor: Jorge Antonio Fernández
 
-// No cambies los nombres de las funciones. 
+// No cambies los nombres de las funciones
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros (int).
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
-  if (x === y) return x;
   return Math.max(x, y);
 }
 
-function mayoriaDeEdad(edad) { 
+function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento. 
   //Si tiene 18 años ó más, devolver --> "Allowed" 
   //Si es menor, devolver --> "Not allowed"
-    return (edad >= 18) ? "Allowed" : "Not allowed"; 
-  } 
+  return (edad >= 18) ? "Allowed" : "Not allowed";
+}
 
-  function conection(status) {
+function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
   //Cuando el estado es igual a 1, el usuario está "Online"
   //Cuando el estado es igual a 2, el usuario está "Away"
@@ -25,7 +24,7 @@ function mayoriaDeEdad(edad) {
   switch (status) {
     case 1:
       return "Online";
-    case 2: 
+    case 2:
       return "Away";
     default:
       return "Offline";
@@ -57,7 +56,7 @@ function colors(color) {
   //En caso que el color recibido sea "blue", devuleve --> "This is blue"
   //En caso que el color recibido sea "red", devuleve --> "This is red"
   //En caso que el color recibido sea "green", devuleve --> "This is green"
-  //En caso que el color recibido sea "orange", devuleve --> "This is orange"
+  //En caso que el color recibido sea "orange", devuleve -->; "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   switch (color) {
@@ -77,7 +76,7 @@ function colors(color) {
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
-  return (numero === 10 || numero === 5); 
+  return (numero === 10 || numero === 5);
 }
 
 function estaEnRango(numero) {
@@ -135,18 +134,18 @@ function esPrimo(numero) {
   return true;
 }
 
-function esVerdadero(valor){
+function esVerdadero(valor) {
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
-  
+
   // la repuesta deberia ser esta (con esta no pasa la prueba)
   // return (valor) ? "Soy verdadero" : "Soy falso";
 
-  // Sin embargo el test me pide esta solucion (con esta pasa la prueba)
-  return (valor) ? true : false;
+  // Sin embargo, el test me pide esta solucion (con esta pasa la prueba)
+  return valor;
 }
 
-function tablaDelSeis(){
+function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 6 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
@@ -156,7 +155,7 @@ function tablaDelSeis(){
   return tablaDelSeis;
 }
 
-function tieneTresDigitos(numero){
+function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   return numero.toString().length === 3;
@@ -172,7 +171,7 @@ function doWhile(numero) {
     numero += 5;
     i++;
 
-  }while(i < 8)
+  } while (i < 8)
   return numero;
 }
 

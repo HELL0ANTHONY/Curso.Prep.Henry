@@ -105,7 +105,7 @@ Los booleanos provienen de la [lógica de Boole](https://es.wikipedia.org/wiki/%
 var meEncantaJavascript = true;
 ```
 
-Los valores posibles de un dato booleando en JS son: `true` o `false`.
+Los valores posibles de un dato booleano en JS son: `true` o `false`.
 
 ## Operadores
 
