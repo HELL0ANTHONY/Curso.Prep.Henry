@@ -32,9 +32,9 @@ En la anterior lección aprendimos sobre _arrays_ o matrices. Las matrices son c
 const nuevoObjeto = {};
 ```
 
-### Pares Clave:Valor (`Key:Value`)
+### Pares Clave: Valor (`Key:Value`)
 
-A diferencia de las matrices que tienen elementos valorados en índices, los objetos usan un concepto llamado pares de clave:valor. La clave (_key_) es el identificador y el valor (_value_) es el valor que queremos guardar en esa clave. La sintaxis es "clave: valor". Los objetos pueden contener muchos pares de clave-valor, deben estar separados por una coma (importante: sin punto y coma dentro de un objeto). Las claves son únicas en un objeto, solo puede haber una clave de ese nombre, aunque, varias claves pueden tener el mismo valor. Los valores pueden ser cualquier tipo de dato de Javascript; cadena, número, booleano, matriz, función o incluso otro objeto. En esta demostración crearemos un objeto `usuario`.
+A diferencia de las matrices que tienen elementos valorados en índices, los objetos usan un concepto llamado pares de clave: valor. La clave (_key_) es el identificador y el valor (_value_) es el valor que queremos guardar en esa clave. La sintaxis es "clave: valor". Los objetos pueden contener muchos pares de clave-valor, deben estar separados por una coma (importante: sin punto y coma dentro de un objeto). Las claves son únicas en un objeto, solo puede haber una clave de ese nombre, aunque, varias claves pueden tener el mismo valor. Los valores pueden ser cualquier tipo de dato de Javascript; cadena, número, booleano, matriz, función o incluso otro objeto. En esta demostración crearemos un objeto `usuario`.
 
 ```javascript
 const usuario = {
@@ -95,7 +95,7 @@ const nuevoObjeto = {
 delete nuevoObjeto.eliminarEstaPropiedad;
 ```
 
-Es raro que veamos el uso de la palabra clave `delete`, muchos consideran que la mejor práctica es establecer el valor de una palabra clave en` undefined`. Dependerá de ti cuando llegue el momento.
+Es raro que veamos el uso de la palabra clave `delete`, muchos consideran que la mejor práctica es establecer el valor de una palabra clave en `undefined`. Dependerá de ti cuando llegue el momento.
 
 ## Métodos
 
@@ -113,7 +113,7 @@ nuevoObjeto.decirHola(); //Hola a todo el mundo!
 
 ## Bucles `for…in`
 
-A veces queremos iterar sobre cada par clave-valor en nuestro objeto. Con las matrices, utilizamos un estándar para el bucle y una variable de número de índice. Los objetos no contienen índices numéricos, por lo que el bucle estándar no funcionará para los objetos. Javascript tiene un segundo tipo de bucle for integrado llamado "_for ... in loop_". Es una sintaxis ligeramente diferente, comienza igual pero entre paréntesis declararemos una variable, la palabra clave `in` y el nombre del objeto. Esto recorrerá cada clave del objeto y finalizará cuando se hayan iterado todas las claves. Podemos usar esta clave, y la notación de corchetes, en nuestro bucle for para acceder al valor asociado con esa clave.
+A veces queremos iterar sobre cada par clave-valor en nuestro objeto. Con las matrices, utilizamos un estándar para el bucle y una variable de número de índice. Los objetos no contienen índices numéricos, por lo que el bucle estándar no funcionará para los objetos. Javascript tiene un segundo tipo de bucle for integrado llamado "_for ... in loop_". Es una sintaxis ligeramente diferente, comienza igual, pero entre paréntesis declararemos una variable, la palabra clave `in` y el nombre del objeto. Esto recorrerá cada clave del objeto y finalizará cuando se hayan iterado todas las claves. Podemos usar esta clave, y la notación de corchetes, en nuestro bucle for para acceder al valor asociado con esa clave.
 
 ```javascript
 const usuario = {
@@ -196,7 +196,7 @@ En este ejemplo la función es invocada por el objeto global por lo tanto this h
 
 * ##### Como método de un objeto
 
-Cuando usamos el _keyword_ `this` dentro de una función que es un método de un objeto, `this` toma hace referencia al objeto sobre el cual se llamó el método:
+Cuando usamos el _keyword_ `this` dentro de una función que es un método de un objeto, `this` hace referencia al objeto sobre el cual se llamó el método:
 
 ``` javascript
 > var o = {
@@ -229,7 +229,7 @@ En este caso, _no depende_ donde hayamos definido la función, lo único que imp
 // el resultado es le mismo!
 ```
 
-De todos modos, hay que tener cuidado con el keyword `this`, ya que pueden aparecer casos donde es contra intuitivo ( Como varias cosas de JavaScript ). Veamos el siguiente ejemplo:
+De todos modos, hay que tener cuidado con el keyword `this`, ya que pueden aparecer casos donde es contra intuitivo (Como varias cosas de JavaScript). Veamos el siguiente ejemplo:
 
 ``` javascript
 > var obj = {
@@ -256,29 +256,34 @@ De hecho, si buscamos dentro del objeto global la variable `nombre`, vamos a enc
 Para resolver este tipo de problemas existe un patrón muy común, y se basa en guardar la referencia al objeto que está en `this` antes de entrar a una función donde no sé a ciencia cierta que valor puede tomar `this`:
 
 ```javascript
-var obj = {
-  nombre: 'Objeto',
-  log   : function(){
-    this.nombre = 'Cambiado'; // this se refiere a este objeto, a `obj`
-    console.log(this); // obj
-
-    var that = this; // Guardo la referencia a this
-
-    var cambia = function( str ){
-      that.nombre = str;  // Uso la referencia dentro de esta funcion
-    }
-
-    cambia('Hoola!!');
-    console.log(this);
-  }
-}
+var obj =
+    {
+        nombre: 'Objeto',
+        
+        log   : function()
+        {
+            // this se refiere a este objeto, a `obj`
+            this.nombre = 'Cambiado';
+            
+            console.log(this); // obj
+            var that = this; // Guardo la referencia a this
+            
+            
+            var cambia = function( str )
+            {
+                // Uso la referencia dentro de esta funcion
+                that.nombre = str;
+            }
+            cambia('Hoola!!');
+            console.log(this);
+        }
 ```
 
 De esta forma, `that` (puede tener cualquier nombre) va a apuntar al objeto `obj` (`this` apuntaba a ese objeto cuando hicimos la asignación). Ahora si, podemos usar `that` en vez de `this` y estar seguros qué es lo que va a tener adentro.
 
 ## Objetos en Javascript
 
-En esta lección aprendimos qué son los Objetos y las muchas formas que existen para acceder a los valores, llamar a los métodos y asignar valores. Muchas de estas técnicas parecían muy familiares, como si las hubiéramos usado en prácticamente todos los aspectos de nuestros aprendizajes hasta ahora. Aquí hay un patrón, eso es porque TODO en Javascript es un Objeto. Las matrices son solo objetos con teclas numéricas, las cadenas son objetos bajo el capó con métodos incorporados, las funciones son en realidad objetos con sus propias propiedades especiales, todo el tiempo de ejecución de Javascript es un objeto (`window` en un navegador o` global` en el Node.js). Cuanto más trabajes con Javascript, más comenzará a tener sentido para ti. Solo recuerda, todo es un objeto.
+En esta lección aprendimos qué son los Objetos y las muchas formas que existen para acceder a los valores, llamar a los métodos y asignar valores. Muchas de estas técnicas parecían muy familiares, como si las hubiéramos usado en prácticamente todos los aspectos de nuestros aprendizajes hasta ahora. Aquí hay un patrón, eso es porque TODO en Javascript es un Objeto. Las matrices son solo objetos con teclas numéricas, las cadenas son objetos bajo el capó con métodos incorporados, las funciones son en realidad objetos con sus propias propiedades especiales, todo el tiempo de ejecución de Javascript es un objeto (`window` en un navegador o `global` en el Node.js). Cuanto más trabajes con Javascript, más comenzará a tener sentido para ti. Solo recuerda, todo es un objeto.
 
 ## Abre la carpeta "homework" y completa la tarea descrita en el archivo README
 [Homework](https://github.com/atralice/Curso.Prep.Henry/tree/master/05-JS-IV/homework)
