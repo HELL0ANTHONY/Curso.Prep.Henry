@@ -70,7 +70,7 @@ let juan = new Usuario('Juan', 'juan.perez');
 let antonio = new Usuario('Antonio', 'atralice');
 
 console.log(juan.introduccion()); // Mi nombre es Juan, mi usuario de Github es juan.perez.
-console.log(riley.introduccion()); // Mi nombre es Antonio, mi usuario de Github es atralice.
+console.log(antonio.introduccion()); // Mi nombre es Antonio, mi usuario de Github es atralice.
 
 ```
 
@@ -142,7 +142,7 @@ Nosotros también podemos generar nuestros propios constructores que de los cual
 < 'Soy Emi de Buenos Aires'
 ```
 
-Ahora todo Alumno de Henry antes de Alumno es una Persona, asique podríamos decir que un Alumno hereda las propiedades de ser Persona.
+Ahora todo Alumno de Henry antes de Alumno es una Persona, así que podríamos decir que un Alumno hereda las propiedades de ser Persona.
 
 ``` javascript
 > function Alumno(nombre,apellido,ciudad,curso) {
