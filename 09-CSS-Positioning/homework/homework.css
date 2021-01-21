@@ -7,32 +7,74 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 
 /* Arrancaremos este ejercicio por vos: */
 #ejercicioUno {
-
+  display: block;
+  text-align: center;
 }
 
 
 /* Ejercicio 2: Posicionar el header */
 
 /* Acá va tu código */
-
+#ejercicioDos {
+  border: none;
+}
 
 
 /* Ejercicio 3: */
 
 /* Acá va tu código */
-
+#ejercicioTres {
+  position: relative;
+  top: 100px;
+  left: 200px;
+}
 
 
 /* Ejercicio 4: */
 
 /* Acá va tu código */
+#ejercicioCuatro {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
 
 
 
 /* Ejercicio 5: */
 
 /* Acá va tu código */
+#ejercicioCinco {
+  display: flex;
+  /* 
+  No se si entendi bien esta parte del ejercicio
+  al principio utilice 
 
+  justify-content: space-between;
+
+  pero los elementos se desplazaban fuera de los margenes
+  por lo que al final opte por esta =(
+   */
+  justify-content: space-around;
+  align-items: center;
+}
 
 
 /* Ejercicio 6. */
+
+/* Acá va tu código */
+#ejercicioCinco{
+  font-display: column-reverse;
+}
+
+#ejercicioSiete #elementoUno{
+  background-color: aqua;
+  color: blue;
+  align-self: flex-end;
+}
+
+#ejercicioSiete #elementoDos {
+  font-style: italic;
+  color: yellowgreen;
+  align-self: center;
+}
